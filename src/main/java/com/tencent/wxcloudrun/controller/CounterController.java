@@ -45,7 +45,7 @@ public class CounterController {
       count = counter.get().getCount();
     }
 
-    return ApiResponse.ok(count);
+    return ApiResponse.ok(count+100);
   }
 
 
@@ -68,7 +68,7 @@ public class CounterController {
       counter.setId(1);
       counter.setCount(count);
       counterService.upsertCount(counter);
-      return ApiResponse.ok(count);
+      return ApiResponse.ok(200);
     } else if (request.getAction().equals("clear")) {
       if (!curCounter.isPresent()) {
         return ApiResponse.ok(0);
