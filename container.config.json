@@ -18,9 +18,7 @@
 		}
 	],
 	"envParams": {
-		"MYSQL_USERNAME": "root",
-		"MYSQL_PASSWORD": "QUE8HzKd",
-		"MYSQL_ADDRESS": "sh-cynosdbmysql-grp-necz2v9w.sql.tencentcdb.com:26246"
+
 	},
 	"customLogs": "stdout",                         
 	"dataBaseName":"springboot_demo",               
