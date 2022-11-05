@@ -38,8 +38,10 @@ public class Person {
     public String CreatePerson(Map<String,String> params) {
         String resultJson = "";
         try{
+            String SecretId = params.get("SecretId");
+            String SecretKey = params.get("SecretKey");
             // 实例化要请求产品的client对象,clientProfile是可选的
-            IaiClient client = FaceInstance.getInstance().getIaiClient();
+            IaiClient client = FaceInstance.getInstance(SecretId,SecretKey);
 
             CreatePersonRequest req = new CreatePersonRequest();
             req.setGroupId(params.get("groupId"));
@@ -63,8 +65,10 @@ public class Person {
     public String DeletePerson(Map<String,String> params) {
         String resultJson = "";
         try{
+            String SecretId = params.get("SecretId");
+            String SecretKey = params.get("SecretKey");
             // 实例化要请求产品的client对象,clientProfile是可选的
-            IaiClient client = FaceInstance.getInstance().getIaiClient();
+            IaiClient client = FaceInstance.getInstance(SecretId,SecretKey);
 
             DeletePersonRequest req = new DeletePersonRequest();
             req.setPersonId(params.get("personId"));
@@ -84,8 +88,10 @@ public class Person {
     public String ModifyPersonBaseInfo(Map<String,String> params) {
         String resultJson = "";
         try{
+            String SecretId = params.get("SecretId");
+            String SecretKey = params.get("SecretKey");
             // 实例化要请求产品的client对象,clientProfile是可选的
-            IaiClient client = FaceInstance.getInstance().getIaiClient();
+            IaiClient client = FaceInstance.getInstance(SecretId,SecretKey);
 
             ModifyPersonBaseInfoRequest req = new ModifyPersonBaseInfoRequest();
             req.setPersonName(params.get("personName"));
@@ -106,8 +112,10 @@ public class Person {
     public String DeletePersonFromGroup(Map<String,String> params) {
         String resultJson = "";
         try{
+            String SecretId = params.get("SecretId");
+            String SecretKey = params.get("SecretKey");
             // 实例化要请求产品的client对象,clientProfile是可选的
-            IaiClient client = FaceInstance.getInstance().getIaiClient();
+            IaiClient client = FaceInstance.getInstance(SecretId,SecretKey);
 
             DeletePersonFromGroupRequest req = new DeletePersonFromGroupRequest();
             req.setGroupId(params.get("groupId"));
@@ -128,8 +136,10 @@ public class Person {
     public String ModifyPersonGroupInfo(Map<String,String> params) {
         String resultJson = "";
         try{
+            String SecretId = params.get("SecretId");
+            String SecretKey = params.get("SecretKey");
             // 实例化要请求产品的client对象,clientProfile是可选的
-            IaiClient client = FaceInstance.getInstance().getIaiClient();
+            IaiClient client = FaceInstance.getInstance(SecretId,SecretKey);
 
             ModifyPersonGroupInfoRequest req = new ModifyPersonGroupInfoRequest();
             req.setGroupId(params.get("groupId"));
@@ -150,8 +160,10 @@ public class Person {
     public String CopyPerson(Map<String,String> params,String[] groupIds) {
         String resultJson = "";
         try{
+            String SecretId = params.get("SecretId");
+            String SecretKey = params.get("SecretKey");
             // 实例化要请求产品的client对象,clientProfile是可选的
-            IaiClient client = FaceInstance.getInstance().getIaiClient();
+            IaiClient client = FaceInstance.getInstance(SecretId,SecretKey);
 
             CopyPersonRequest req = new CopyPersonRequest();
             req.setPersonId(params.get("personId"));
@@ -172,8 +184,10 @@ public class Person {
     public String CreateFace(Map<String,String> params,String[] images,String[] urls) {
         String resultJson = "";
         try{
+            String SecretId = params.get("SecretId");
+            String SecretKey = params.get("SecretKey");
             // 实例化要请求产品的client对象,clientProfile是可选的
-            IaiClient client = FaceInstance.getInstance().getIaiClient();
+            IaiClient client = FaceInstance.getInstance(SecretId,SecretKey);
 
             CreateFaceRequest req = new CreateFaceRequest();
             req.setImages(images);
@@ -195,8 +209,10 @@ public class Person {
     public String DeleteFace(Map<String,String> params,String[] faceIds) {
         String resultJson = "";
         try{
+            String SecretId = params.get("SecretId");
+            String SecretKey = params.get("SecretKey");
             // 实例化要请求产品的client对象,clientProfile是可选的
-            IaiClient client = FaceInstance.getInstance().getIaiClient();
+            IaiClient client = FaceInstance.getInstance(SecretId,SecretKey);
 
             DeleteFaceRequest req = new DeleteFaceRequest();
             req.setPersonId(params.get("personId"));
@@ -217,8 +233,10 @@ public class Person {
     public String GetPersonGroupInfo(Map<String,String> params) {
         String resultJson = "";
         try{
+            String SecretId = params.get("SecretId");
+            String SecretKey = params.get("SecretKey");
             // 实例化要请求产品的client对象,clientProfile是可选的
-            IaiClient client = FaceInstance.getInstance().getIaiClient();
+            IaiClient client = FaceInstance.getInstance(SecretId,SecretKey);
 
             GetPersonGroupInfoRequest req = new GetPersonGroupInfoRequest();
             req.setPersonId(params.get("personId"));
@@ -239,8 +257,10 @@ public class Person {
     public String GetPersonBaseInfo(Map<String,String> params) {
         String resultJson = "";
         try{
+            String SecretId = params.get("SecretId");
+            String SecretKey = params.get("SecretKey");
             // 实例化要请求产品的client对象,clientProfile是可选的
-            IaiClient client = FaceInstance.getInstance().getIaiClient();
+            IaiClient client = FaceInstance.getInstance(SecretId,SecretKey);
 
             GetPersonBaseInfoRequest req = new GetPersonBaseInfoRequest();
             req.setPersonId(params.get("personId"));
@@ -260,8 +280,10 @@ public class Person {
     public String GetPersonList(Map<String,String> params) {
         String resultJson = "";
         try{
+            String SecretId = params.get("SecretId");
+            String SecretKey = params.get("SecretKey");
             // 实例化要请求产品的client对象,clientProfile是可选的
-            IaiClient client = FaceInstance.getInstance().getIaiClient();
+            IaiClient client = FaceInstance.getInstance(SecretId,SecretKey);
 
             GetPersonListRequest req = new GetPersonListRequest();
             req.setGroupId(params.get("groupId"));
@@ -283,8 +305,10 @@ public class Person {
     public String GetPersonListNum(Map<String,String> params) {
         String resultJson = "";
         try{
+            String SecretId = params.get("SecretId");
+            String SecretKey = params.get("SecretKey");
             // 实例化要请求产品的client对象,clientProfile是可选的
-            IaiClient client = FaceInstance.getInstance().getIaiClient();
+            IaiClient client = FaceInstance.getInstance(SecretId,SecretKey);
 
             GetPersonListNumRequest req = new GetPersonListNumRequest();
             req.setGroupId(params.get("groupId"));

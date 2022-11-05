@@ -35,8 +35,10 @@ public class Group {
     public String CreateGroup(Map<String,String> params) {
         String resultJson = "";
         try{
+            String SecretId = params.get("SecretId");
+            String SecretKey = params.get("SecretKey");
             // 实例化要请求产品的client对象,clientProfile是可选的
-            IaiClient client = FaceInstance.getInstance().getIaiClient();
+            IaiClient client = FaceInstance.getInstance(SecretId,SecretKey);
 
             CreateGroupRequest req = new CreateGroupRequest();
             req.setGroupName(params.get("groupName"));
@@ -58,8 +60,10 @@ public class Group {
     public String DeleteGroup(Map<String,String> params) {
         String resultJson = "";
         try{
+            String SecretId = params.get("SecretId");
+            String SecretKey = params.get("SecretKey");
             // 实例化要请求产品的client对象,clientProfile是可选的
-            IaiClient client = FaceInstance.getInstance().getIaiClient();
+            IaiClient client = FaceInstance.getInstance(SecretId,SecretKey);
 
             DeleteGroupRequest req = new DeleteGroupRequest();
             req.setGroupId(params.get("groupId"));
@@ -79,8 +83,10 @@ public class Group {
     public String GetGroupInfo(Map<String,String> params) {
         String resultJson = "";
         try{
+            String SecretId = params.get("SecretId");
+            String SecretKey = params.get("SecretKey");
             // 实例化要请求产品的client对象,clientProfile是可选的
-            IaiClient client = FaceInstance.getInstance().getIaiClient();
+            IaiClient client = FaceInstance.getInstance(SecretId,SecretKey);
 
             GetGroupInfoRequest req = new GetGroupInfoRequest();
             req.setGroupId(params.get("groupId"));
@@ -100,8 +106,10 @@ public class Group {
     public String GetGroupList(Map<String,String> params) {
         String resultJson = "";
         try{
+            String SecretId = params.get("SecretId");
+            String SecretKey = params.get("SecretKey");
             // 实例化要请求产品的client对象,clientProfile是可选的
-            IaiClient client = FaceInstance.getInstance().getIaiClient();
+            IaiClient client = FaceInstance.getInstance(SecretId,SecretKey);
 
             GetGroupListRequest req = new GetGroupListRequest();
             req.setOffset(Utils.type2Long(params,"offset",0));
@@ -122,8 +130,10 @@ public class Group {
     public String ModifyGroup(Map<String,String> params) {
         String resultJson = "";
         try{
+            String SecretId = params.get("SecretId");
+            String SecretKey = params.get("SecretKey");
             // 实例化要请求产品的client对象,clientProfile是可选的
-            IaiClient client = FaceInstance.getInstance().getIaiClient();
+            IaiClient client = FaceInstance.getInstance(SecretId,SecretKey);
 
             ModifyGroupRequest req = new ModifyGroupRequest();
             req.setGroupName(params.get("groupName"));
@@ -144,8 +154,10 @@ public class Group {
     public String UpgradeGroupFaceModelVersion(Map<String,String> params) {
         String resultJson = "";
         try{
+            String SecretId = params.get("SecretId");
+            String SecretKey = params.get("SecretKey");
             // 实例化要请求产品的client对象,clientProfile是可选的
-            IaiClient client = FaceInstance.getInstance().getIaiClient();
+            IaiClient client = FaceInstance.getInstance(SecretId,SecretKey);
 
             UpgradeGroupFaceModelVersionRequest req = new UpgradeGroupFaceModelVersionRequest();
             req.setGroupId(params.get("groupId"));
@@ -165,8 +177,10 @@ public class Group {
     public String RevertGroupFaceModelVersion(Map<String,String> params) {
         String resultJson = "";
         try{
+            String SecretId = params.get("SecretId");
+            String SecretKey = params.get("SecretKey");
             // 实例化要请求产品的client对象,clientProfile是可选的
-            IaiClient client = FaceInstance.getInstance().getIaiClient();
+            IaiClient client = FaceInstance.getInstance(SecretId,SecretKey);
 
             RevertGroupFaceModelVersionRequest req = new RevertGroupFaceModelVersionRequest();
             req.setJobId(params.get("jobId"));
@@ -186,8 +200,10 @@ public class Group {
     public String GetUpgradeGroupFaceModelVersionJobList(Map<String,String> params) {
         String resultJson = "";
         try{
+            String SecretId = params.get("SecretId");
+            String SecretKey = params.get("SecretKey");
             // 实例化要请求产品的client对象,clientProfile是可选的
-            IaiClient client = FaceInstance.getInstance().getIaiClient();
+            IaiClient client = FaceInstance.getInstance(SecretId,SecretKey);
 
             GetUpgradeGroupFaceModelVersionJobListRequest req = new GetUpgradeGroupFaceModelVersionJobListRequest();
             req.setOffset(Utils.type2Long(params,"offset",0));
@@ -207,8 +223,10 @@ public class Group {
     public String GetUpgradeGroupFaceModelVersionResult(Map<String,String> params) {
         String resultJson = "";
         try{
+            String SecretId = params.get("SecretId");
+            String SecretKey = params.get("SecretKey");
             // 实例化要请求产品的client对象,clientProfile是可选的
-            IaiClient client = FaceInstance.getInstance().getIaiClient();
+            IaiClient client = FaceInstance.getInstance(SecretId,SecretKey);
 
             GetUpgradeGroupFaceModelVersionResultRequest req = new GetUpgradeGroupFaceModelVersionResultRequest();
             req.setJobId(params.get("jobId"));

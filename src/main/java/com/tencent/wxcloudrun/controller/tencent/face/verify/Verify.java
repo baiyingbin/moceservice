@@ -21,8 +21,10 @@ public class Verify {
     public String VerifyFace(Map<String,String> params) {
         String resultJson = "";
         try{
+            String SecretId = params.get("SecretId");
+            String SecretKey = params.get("SecretKey");
             // 实例化要请求产品的client对象,clientProfile是可选的
-            IaiClient client = FaceInstance.getInstance().getIaiClient();
+            IaiClient client = FaceInstance.getInstance(SecretId,SecretKey);
             VerifyFaceRequest req = new VerifyFaceRequest();
             req.setImage(params.get("image"));
             req.setUrl(params.get("url"));
@@ -42,8 +44,10 @@ public class Verify {
     public String VerifyPerson(Map<String,String> params) {
         String resultJson = "";
         try{
+            String SecretId = params.get("SecretId");
+            String SecretKey = params.get("SecretKey");
             // 实例化要请求产品的client对象,clientProfile是可选的
-            IaiClient client = FaceInstance.getInstance().getIaiClient();
+            IaiClient client = FaceInstance.getInstance(SecretId,SecretKey);
             VerifyPersonRequest req = new VerifyPersonRequest();
             req.setImage(params.get("image"));
             req.setUrl(params.get("url"));

@@ -20,8 +20,10 @@ public class DetectLive {
     public String DetectLiveFace(Map<String,String> params) {
         String resultJson = "";
         try{
+            String SecretId = params.get("SecretId");
+            String SecretKey = params.get("SecretKey");
             // 实例化要请求产品的client对象,clientProfile是可选的
-            IaiClient client = FaceInstance.getInstance().getIaiClient();
+            IaiClient client = FaceInstance.getInstance(SecretId,SecretKey);
             DetectLiveFaceRequest req = new DetectLiveFaceRequest();
             req.setImage(params.get("image"));
             req.setUrl(params.get("url"));
@@ -41,8 +43,10 @@ public class DetectLive {
     public String DetectLiveFaceAccurate(Map<String,String> params) {
         String resultJson = "";
         try{
+            String SecretId = params.get("SecretId");
+            String SecretKey = params.get("SecretKey");
             // 实例化要请求产品的client对象,clientProfile是可选的
-            IaiClient client = FaceInstance.getInstance().getIaiClient();
+            IaiClient client = FaceInstance.getInstance(SecretId,SecretKey);
             DetectLiveFaceAccurateRequest req = new DetectLiveFaceAccurateRequest();
             req.setImage(params.get("image"));
             req.setUrl(params.get("url"));

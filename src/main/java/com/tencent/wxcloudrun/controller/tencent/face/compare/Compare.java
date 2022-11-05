@@ -21,8 +21,10 @@ public class Compare {
     public String CompareFace(Map<String,String> params) {
         String resultJson = "";
         try{
+            String SecretId = params.get("SecretId");
+            String SecretKey = params.get("SecretKey");
             // 实例化要请求产品的client对象,clientProfile是可选的
-            IaiClient client = FaceInstance.getInstance().getIaiClient();
+            IaiClient client = FaceInstance.getInstance(SecretId,SecretKey);
 
             CompareFaceRequest req = new CompareFaceRequest();
             req.setImageA(params.get("imageA"));
@@ -46,8 +48,10 @@ public class Compare {
     public String CompareMaskFace(Map<String,String> params) {
         String resultJson = "";
         try{
+            String SecretId = params.get("SecretId");
+            String SecretKey = params.get("SecretKey");
             // 实例化要请求产品的client对象,clientProfile是可选的
-            IaiClient client = FaceInstance.getInstance().getIaiClient();
+            IaiClient client = FaceInstance.getInstance(SecretId,SecretKey);
 
             CompareMaskFaceRequest req = new CompareMaskFaceRequest();
             req.setImageA(params.get("imageA"));
