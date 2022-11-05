@@ -5,9 +5,15 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
+#    本地测试使用，针对IJ开发工具测试
+#    url: jdbc:mysql://sh-cynosdbmysql-grp-necz2v9w.sql.tencentcdb.com:26246/springboot_demo
+#    username: root
+#    password: QUE8HzKd
+#    上传部署到云服务后使用
     url: jdbc:mysql://${MYSQL_ADDRESS}/${MYSQL_DATABASE:springboot_demo}
     username: ${MYSQL_USERNAME}
     password: ${MySQL_PASSWORD}
+
   mvc:
     view:
       suffix: .html
