@@ -4,10 +4,6 @@ public class Constant {
 
     public static String TENCENT_CLOUD_HTTP="com.tencent.cloud";
 
-    public static String AppId=  "1256395328";
-    public static String SecretId=  "AKIDznMehTyC8oENGuGL9hyyhFWVDepiKflZ";
-    public static String SecretKey= "YrviETR9akcGdjY7OO7ZlfIfmcBTVGjv";
-
     public static String Face_Detect_Endpoint= "iai.tencentcloudapi.com";
     public static String Face_Fusion_Endpoint= "facefusion.tencentcloudapi.com";
     public static String Face_Ft_Endpoint= "ft.tencentcloudapi.com";
