@@ -22,7 +22,7 @@ public class Analyze {
             String SecretId = params.get("SecretId");
             String SecretKey = params.get("SecretKey");
             // 实例化要请求产品的client对象,clientProfile是可选的
-            IaiClient client = FaceInstance.getInstance(SecretId,SecretKey);
+            IaiClient client = FaceInstance.getInstance(SecretId,SecretKey).getIaiClient();
 
             // 实例化一个请求对象,每个接口都会对应一个request对象
             AnalyzeFaceRequest req = new AnalyzeFaceRequest();
@@ -49,7 +49,7 @@ public class Analyze {
             String SecretId = params.get("SecretId");
             String SecretKey = params.get("SecretKey");
             // 实例化要请求产品的client对象,clientProfile是可选的
-            IaiClient client = FaceInstance.getInstance(SecretId,SecretKey);
+            IaiClient client = FaceInstance.getInstance(SecretId,SecretKey).getIaiClient();
 
             // 实例化一个请求对象,每个接口都会对应一个request对象
             AnalyzeDenseLandmarksRequest req = new AnalyzeDenseLandmarksRequest();

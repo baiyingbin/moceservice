@@ -31,8 +31,10 @@ public class FtChange {
     public String ChangeAgePic(Map<String,String> params,List<Map<String,String>> ageInfoList) {
         String resultJson = "";
         try{
+            String SecretId = params.get("SecretId");
+            String SecretKey = params.get("SecretKey");
             // 实例化要请求产品的client对象,clientProfile是可选的
-            FtClient client = FtChangeInstance.getInstance().getFtClient();
+            FtClient client = FtChangeInstance.getInstance(SecretId,SecretKey).getFtClient();
             ChangeAgePicRequest req = new ChangeAgePicRequest();
             req.setImage(params.get("image"));
             req.setUrl(params.get("url"));
@@ -61,8 +63,10 @@ public class FtChange {
     public String SwapGenderPic(Map<String,String> params,List<Map<String,String>> genderInfoList) {
         String resultJson = "";
         try{
+            String SecretId = params.get("SecretId");
+            String SecretKey = params.get("SecretKey");
             // 实例化要请求产品的client对象,clientProfile是可选的
-            FtClient client = FtChangeInstance.getInstance().getFtClient();
+            FtClient client = FtChangeInstance.getInstance(SecretId,SecretKey).getFtClient();
             SwapGenderPicRequest req = new SwapGenderPicRequest();
             req.setImage(params.get("image"));
             req.setUrl(params.get("url"));
@@ -94,8 +98,10 @@ public class FtChange {
     public String FaceCartoonPic(@RequestBody Map<String,String> params) {
         String resultJson = "";
         try{
+            String SecretId = params.get("SecretId");
+            String SecretKey = params.get("SecretKey");
             // 实例化要请求产品的client对象,clientProfile是可选的
-            FtClient client = FtChangeInstance.getInstance().getFtClient();
+            FtClient client = FtChangeInstance.getInstance(SecretId,SecretKey).getFtClient();
             FaceCartoonPicRequest req = new FaceCartoonPicRequest();
             req.setImage(params.get("image"));
             req.setUrl(params.get("url"));
@@ -116,8 +122,10 @@ public class FtChange {
     public String MorphFace(Map<String,String> params, String [] images, String [] urls, List<Map<String, String>> gradientInfoMapList) {
         String resultJson = "";
         try{
+            String SecretId = params.get("SecretId");
+            String SecretKey = params.get("SecretKey");
             // 实例化要请求产品的client对象,clientProfile是可选的
-            FtClient client = FtChangeInstance.getInstance().getFtClient();
+            FtClient client = FtChangeInstance.getInstance(SecretId,SecretKey).getFtClient();
 
             MorphFaceRequest req = new MorphFaceRequest();
 
@@ -161,8 +169,10 @@ public class FtChange {
     public String CancelFaceMorphJob(Map<String,String> params) {
         String resultJson = "";
         try{
+            String SecretId = params.get("SecretId");
+            String SecretKey = params.get("SecretKey");
             // 实例化要请求产品的client对象,clientProfile是可选的
-            FtClient client = FtChangeInstance.getInstance().getFtClient();
+            FtClient client = FtChangeInstance.getInstance(SecretId,SecretKey).getFtClient();
             CancelFaceMorphJobRequest req = new CancelFaceMorphJobRequest();
             req.setJobId(params.get("jobId"));
             // 返回的resp是一个CancelFaceMorphJobResponse的实例，与请求对象对应

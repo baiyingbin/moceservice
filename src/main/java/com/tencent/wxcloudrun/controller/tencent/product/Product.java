@@ -17,8 +17,10 @@ public class Product {
     public String DetectProductBeta(Map<String,String> params) {
         String resultJson = "";
         try{
+            String SecretId = params.get("SecretId");
+            String SecretKey = params.get("SecretKey");
             // 实例化要请求产品的client对象,clientProfile是可选的
-            TiiaClient client = DetectProductInstance.getInstance().getTiiaClient();
+            TiiaClient client = DetectProductInstance.getInstance(SecretId,SecretKey).getTiiaClient();
             DetectProductBetaRequest req = new DetectProductBetaRequest();
             req.setImageUrl(params.get("imageUrl"));
             req.setImageBase64(params.get("imageBase64"));
@@ -38,8 +40,10 @@ public class Product {
     public String DetectProduct(Map<String,String> params) {
         String resultJson = "";
         try{
+            String SecretId = params.get("SecretId");
+            String SecretKey = params.get("SecretKey");
             // 实例化要请求产品的client对象,clientProfile是可选的
-            TiiaClient client = DetectProductInstance.getInstance().getTiiaClient();
+            TiiaClient client = DetectProductInstance.getInstance(SecretId,SecretKey).getTiiaClient();
             DetectProductRequest req = new DetectProductRequest();
             req.setImageUrl(params.get("imageUrl"));
             req.setImageBase64(params.get("imageBase64"));
@@ -59,8 +63,10 @@ public class Product {
     public String RecognizeCarPro(Map<String,String> params) {
         String resultJson = "";
         try{
+            String SecretId = params.get("SecretId");
+            String SecretKey = params.get("SecretKey");
             // 实例化要请求产品的client对象,clientProfile是可选的
-            TiiaClient client = DetectProductInstance.getInstance().getTiiaClient();
+            TiiaClient client = DetectProductInstance.getInstance(SecretId,SecretKey).getTiiaClient();
             RecognizeCarProRequest req = new RecognizeCarProRequest();
             req.setImageUrl(params.get("imageUrl"));
             req.setImageBase64(params.get("imageBase64"));
@@ -80,8 +86,10 @@ public class Product {
     public String RecognizeCar(Map<String,String> params) {
         String resultJson = "";
         try{
+            String SecretId = params.get("SecretId");
+            String SecretKey = params.get("SecretKey");
             // 实例化要请求产品的client对象,clientProfile是可选的
-            TiiaClient client = DetectProductInstance.getInstance().getTiiaClient();
+            TiiaClient client = DetectProductInstance.getInstance(SecretId,SecretKey).getTiiaClient();
             RecognizeCarRequest req = new RecognizeCarRequest();
             req.setImageUrl(params.get("imageUrl"));
             req.setImageBase64(params.get("imageBase64"));
@@ -101,8 +109,10 @@ public class Product {
     public String DetectMisbehavior(Map<String,String> params) {
         String resultJson = "";
         try{
+            String SecretId = params.get("SecretId");
+            String SecretKey = params.get("SecretKey");
             // 实例化要请求产品的client对象,clientProfile是可选的
-            TiiaClient client = DetectProductInstance.getInstance().getTiiaClient();
+            TiiaClient client = DetectProductInstance.getInstance(SecretId,SecretKey).getTiiaClient();
             DetectMisbehaviorRequest req = new DetectMisbehaviorRequest();
             req.setImageUrl(params.get("imageUrl"));
             req.setImageBase64(params.get("imageBase64"));
@@ -122,8 +132,10 @@ public class Product {
     public String DetectDisgust(Map<String,String> params) {
         String resultJson = "";
         try{
+            String SecretId = params.get("SecretId");
+            String SecretKey = params.get("SecretKey");
             // 实例化要请求产品的client对象,clientProfile是可选的
-            TiiaClient client = DetectProductInstance.getInstance().getTiiaClient();
+            TiiaClient client = DetectProductInstance.getInstance(SecretId,SecretKey).getTiiaClient();
             DetectDisgustRequest req = new DetectDisgustRequest();
             req.setImageUrl(params.get("imageUrl"));
             req.setImageBase64(params.get("imageBase64"));

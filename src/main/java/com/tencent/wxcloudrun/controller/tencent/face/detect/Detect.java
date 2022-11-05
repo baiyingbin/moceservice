@@ -29,7 +29,7 @@ public class Detect {
             String SecretId = params.get("SecretId");
             String SecretKey = params.get("SecretKey");
             // 实例化要请求产品的client对象,clientProfile是可选的
-            IaiClient client = FaceInstance.getInstance(SecretId,SecretKey);
+            IaiClient client = FaceInstance.getInstance(SecretId,SecretKey).getIaiClient();
             DetectFaceRequest req = new DetectFaceRequest();
             req.setMaxFaceNum(Utils.type2Long(params,"maxFaceNum",1));
             req.setMinFaceSize(Utils.type2Long(params,"minFaceSize",34));
@@ -58,7 +58,7 @@ public class Detect {
             String SecretId = params.get("SecretId");
             String SecretKey = params.get("SecretKey");
             // 实例化要请求产品的client对象,clientProfile是可选的
-            IaiClient client = FaceInstance.getInstance(SecretId,SecretKey);
+            IaiClient client = FaceInstance.getInstance(SecretId,SecretKey).getIaiClient();
             DetectFaceAttributesRequest req = new DetectFaceAttributesRequest();
             req.setMaxFaceNum(Utils.type2Long(params,"maxFaceNum",1));
             req.setImage(params.get("image"));

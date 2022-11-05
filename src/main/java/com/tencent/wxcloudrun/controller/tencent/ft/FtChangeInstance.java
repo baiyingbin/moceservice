@@ -18,10 +18,10 @@ public class FtChangeInstance {
     /**
      * 构造函数，初始化腾讯接口请求的对象
      */
-    private FtChangeInstance(){
+    private FtChangeInstance(String SecretId, String SecretKey){
         // 实例化一个认证对象，入参需要传入腾讯云账户secretId，secretKey,此处还需注意密钥对的保密
         // 密钥可前往https://console.cloud.tencent.com/cam/capi网站进行获取
-        Credential cred = new Credential(Constant.SecretId, Constant.SecretKey);
+        Credential cred = new Credential(SecretId, SecretKey);
         HttpProfile httpProfile = new HttpProfile();
         httpProfile.setEndpoint(Constant.Face_Ft_Endpoint);
         // 实例化一个client选项，可选的，没有特殊需求可以跳过
@@ -31,11 +31,11 @@ public class FtChangeInstance {
         ftClient = new FtClient(cred,  Constant.Region, clientProfile);
     }
 
-    public synchronized static FtChangeInstance getInstance(){
+    public synchronized static FtChangeInstance getInstance(String SecretId, String SecretKey){
         if(faceInstance == null){
             synchronized (FtChangeInstance.class){
                 if(faceInstance == null){
-                    faceInstance = new FtChangeInstance();
+                    faceInstance = new FtChangeInstance(SecretId,SecretKey);
                 }
             }
         }

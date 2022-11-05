@@ -29,7 +29,7 @@ public class Search {
             String SecretId = params.get("SecretId");
             String SecretKey = params.get("SecretKey");
             // 实例化要请求产品的client对象,clientProfile是可选的
-            IaiClient client = FaceInstance.getInstance(SecretId,SecretKey);
+            IaiClient client = FaceInstance.getInstance(SecretId,SecretKey).getIaiClient();
 
             SearchFacesRequest req = new SearchFacesRequest();
             req.setGroupIds(groupIds);
@@ -59,7 +59,7 @@ public class Search {
             String SecretId = params.get("SecretId");
             String SecretKey = params.get("SecretKey");
             // 实例化要请求产品的client对象,clientProfile是可选的
-            IaiClient client = FaceInstance.getInstance(SecretId,SecretKey);
+            IaiClient client = FaceInstance.getInstance(SecretId,SecretKey).getIaiClient();
 
             SearchPersonsRequest req = new SearchPersonsRequest();
             req.setGroupIds(groupIds);
@@ -87,7 +87,7 @@ public class Search {
             String SecretId = params.get("SecretId");
             String SecretKey = params.get("SecretKey");
             // 实例化要请求产品的client对象,clientProfile是可选的
-            IaiClient client = FaceInstance.getInstance(SecretId,SecretKey);
+            IaiClient client = FaceInstance.getInstance(SecretId,SecretKey).getIaiClient();
 
             SearchFacesReturnsByGroupRequest req = new SearchFacesReturnsByGroupRequest();
             req.setGroupIds(groupIds);
@@ -115,7 +115,7 @@ public class Search {
             String SecretId = params.get("SecretId");
             String SecretKey = params.get("SecretKey");
             // 实例化要请求产品的client对象,clientProfile是可选的
-            IaiClient client = FaceInstance.getInstance(SecretId,SecretKey);
+            IaiClient client = FaceInstance.getInstance(SecretId,SecretKey).getIaiClient();
 
             SearchPersonsReturnsByGroupRequest req = new SearchPersonsReturnsByGroupRequest();
             req.setGroupIds(groupIds);

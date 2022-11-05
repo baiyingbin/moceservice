@@ -24,7 +24,7 @@ public class Compare {
             String SecretId = params.get("SecretId");
             String SecretKey = params.get("SecretKey");
             // 实例化要请求产品的client对象,clientProfile是可选的
-            IaiClient client = FaceInstance.getInstance(SecretId,SecretKey);
+            IaiClient client = FaceInstance.getInstance(SecretId,SecretKey).getIaiClient();
 
             CompareFaceRequest req = new CompareFaceRequest();
             req.setImageA(params.get("imageA"));
@@ -51,7 +51,7 @@ public class Compare {
             String SecretId = params.get("SecretId");
             String SecretKey = params.get("SecretKey");
             // 实例化要请求产品的client对象,clientProfile是可选的
-            IaiClient client = FaceInstance.getInstance(SecretId,SecretKey);
+            IaiClient client = FaceInstance.getInstance(SecretId,SecretKey).getIaiClient();
 
             CompareMaskFaceRequest req = new CompareMaskFaceRequest();
             req.setImageA(params.get("imageA"));

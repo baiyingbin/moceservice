@@ -31,9 +31,10 @@ public class Fuse {
     public String FuseFace(@RequestBody Map<String,String> params,@RequestBody List<Map<String,String>> mergeInfoList) {
         String resultJson = "";
         try{
+            String SecretId = params.get("SecretId");
+            String SecretKey = params.get("SecretKey");
             // 实例化要请求产品的client对象,clientProfile是可选的
-            FacefusionClient client = FaceFuseInstance.getInstance().getFaceFusionClient();
-
+            FacefusionClient client = FaceFuseInstance.getInstance(SecretId,SecretKey).getFaceFusionClient();
             // 实例化一个请求对象,每个接口都会对应一个request对象
             FuseFaceRequest req = new FuseFaceRequest();
             req.setProjectId(params.get("projectId"));
@@ -65,8 +66,10 @@ public class Fuse {
     public String FaceFusion(@RequestBody Map<String,String> params) {
         String resultJson = "";
         try{
+            String SecretId = params.get("SecretId");
+            String SecretKey = params.get("SecretKey");
             // 实例化要请求产品的client对象,clientProfile是可选的
-            FacefusionClient client = FaceFuseInstance.getInstance().getFaceFusionClient();
+            FacefusionClient client = FaceFuseInstance.getInstance(SecretId,SecretKey).getFaceFusionClient();
 
             // 实例化一个请求对象,每个接口都会对应一个request对象
             FaceFusionRequest req = new FaceFusionRequest();
@@ -91,8 +94,10 @@ public class Fuse {
     public String FaceFusionLite(@RequestBody Map<String,String> params, @RequestBody List<Map<String,String>> mergeInfoList) {
         String resultJson = "";
         try{
+            String SecretId = params.get("SecretId");
+            String SecretKey = params.get("SecretKey");
             // 实例化要请求产品的client对象,clientProfile是可选的
-            FacefusionClient client = FaceFuseInstance.getInstance().getFaceFusionClient();
+            FacefusionClient client = FaceFuseInstance.getInstance(SecretId,SecretKey).getFaceFusionClient();
             FaceFusionLiteRequest req = new FaceFusionLiteRequest();
             req.setProjectId(params.get("projectId"));
             req.setModelId(params.get("modelId"));
@@ -123,8 +128,10 @@ public class Fuse {
     public String DescribeMaterialList(@RequestBody Map<String,String> params) {
         String resultJson = "";
         try{
+            String SecretId = params.get("SecretId");
+            String SecretKey = params.get("SecretKey");
             // 实例化要请求产品的client对象,clientProfile是可选的
-            FacefusionClient client = FaceFuseInstance.getInstance().getFaceFusionClient();
+            FacefusionClient client = FaceFuseInstance.getInstance(SecretId,SecretKey).getFaceFusionClient();
             DescribeMaterialListRequest req = new DescribeMaterialListRequest();
             req.setActivityId(Utils.type2Long(params,"activityId",-1));
             req.setMaterialId(params.get("materialId"));
