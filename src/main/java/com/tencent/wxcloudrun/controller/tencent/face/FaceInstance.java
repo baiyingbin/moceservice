@@ -17,7 +17,6 @@ public class FaceInstance {
     public static IaiClient getInstance(String SecretId,String SecretKey){
         // 实例化一个认证对象，入参需要传入腾讯云账户secretId，secretKey,此处还需注意密钥对的保密
         // 密钥可前往https://console.cloud.tencent.com/cam/capi网站进行获取
-
         Credential cred = new Credential(SecretId, SecretKey);
         HttpProfile httpProfile = new HttpProfile();
         httpProfile.setEndpoint(Constant.Face_Detect_Endpoint);
